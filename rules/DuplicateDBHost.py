@@ -3,7 +3,7 @@
 from ansiblelint import AnsibleLintRule
 
 
-class DuplicateDB(AnsibleLintRule):
+class DuplicateDBHost(AnsibleLintRule):
     id = 'ANSIBLE0010'
     shortdesc = 'Duplicate DB host found'
     description = \
