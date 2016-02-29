@@ -1,21 +1,22 @@
 from ansiblelint import RulesCollection
 from behave import *
 
-from rules.UnusedVars import UnusedVars
+from rules.IncorrectDBTableName import IncorrectDBTableName
 
 
-@given('inventory and playbook having vars not used in tasks')
+@given('inventory and playbook with DB or table names being of different case while dropping '
+	'than while creating')
 def step_impl(context):
 	# Bind inventory and playbook to the context
 	context.inv = '/path/to/inv'
 	context.pb = '/path/tispb'
 
 
-@when('linted with UnusedVars rule')
+@when('linted with IncorrectDBTableName rule')
 def step_impl(context):
 	context.result = True  # invoke the linter rule here instead
 
 
-@then('reports unused vars')
+@then('reports such tasks and name differences')
 def step_impl(context):
 	assert context.result is True
