@@ -1,7 +1,7 @@
 ansible==2.0.0.2
 ansible-lint==2.3.8
 behave==1.2.5
-ecdsa==0.13
+ecdsa==0.13.3
 enum34==1.1.2
 Jinja2==2.8
 MarkupSafe==0.23
